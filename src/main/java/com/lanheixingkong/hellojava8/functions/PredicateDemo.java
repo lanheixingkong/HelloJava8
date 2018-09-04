@@ -32,6 +32,7 @@ public class PredicateDemo {
 		List<String> strList = Lists.newArrayList("hello", "", "lanheixingkong", null, "java 8", " ", "null");
 		Predicate<String> notBlankStringPredicate = str -> StringUtils.isNotBlank(str);
 		List<String> notBlankStrList = filter(strList, notBlankStringPredicate);
+		List<String> notBlankStrList2 = filter(strList, str -> StringUtils.isNotBlank(str));
 		// [hello, lanheixingkong, java 8, null]
 		System.out.println(notBlankStrList);
 	}
