@@ -21,4 +21,8 @@ public class SoccerTeam {
 	public SoccerTeam(Enum<TeamType> teamType) {
 		this.teamType = teamType;
 	}
+
+	public boolean isClub() {
+		return this.teamType == TeamType.CLUB;
+	}
 }
