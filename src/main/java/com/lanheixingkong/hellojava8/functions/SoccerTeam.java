@@ -15,11 +15,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SoccerTeam {
 	private String name;
-	private Enum<TeamType> teamType;
+	private TeamType teamType;
 	private Integer score;
 
-	public SoccerTeam(Enum<TeamType> teamType) {
+	public SoccerTeam(TeamType teamType) {
 		this.teamType = teamType;
+	}
+
+	public SoccerTeam(String name, TeamType teamType, Integer score) {
+		this.name = name;
+		this.teamType = teamType;
+		this.score = score;
 	}
 
 	public boolean isClub() {
